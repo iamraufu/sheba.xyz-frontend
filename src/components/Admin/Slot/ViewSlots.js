@@ -11,7 +11,7 @@ const ViewSlots = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/slots`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/slots`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -31,7 +31,7 @@ const ViewSlots = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/slot/${id}`, {
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/slot/${id}`, {
                     method: 'DELETE'
                 })
                 const result = await response.json()
@@ -40,7 +40,7 @@ const ViewSlots = () => {
                     toast.error(`${result.message}`)
                     const fetchData = async () => {
                         try {
-                            const response = await fetch(`http://localhost:5000/slots`)
+                            const response = await fetch(`https://sheba-xyz-backend.onrender.com/slots`)
                             const result = await response.json()
 
                             if (result.status) {

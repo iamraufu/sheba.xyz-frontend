@@ -38,7 +38,7 @@ const BookingModal = ({ isOpen, onClose, children }) => {
 
                 const fetchData = async () => {
                     try {
-                        const response = await fetch(`http://localhost:5000/order`, {
+                        const response = await fetch(`https://sheba-xyz-backend.onrender.com/order`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(formData)
@@ -72,7 +72,7 @@ const BookingModal = ({ isOpen, onClose, children }) => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/pay/${amount}/${trx_id}`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/pay/${amount}/${trx_id}`)
                 const result = await response.json()
                 console.log(result);
                 if (result.status) {

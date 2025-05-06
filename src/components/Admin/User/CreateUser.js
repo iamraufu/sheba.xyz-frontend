@@ -25,7 +25,7 @@ const CreateUser = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/user`, {
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/user`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -37,7 +37,7 @@ const CreateUser = () => {
                     toast.success(`${result.message}`)
                     const fetchData = async () => {
                         try {
-                            const response = await fetch(`http://localhost:5000/users`)
+                            const response = await fetch(`https://sheba-xyz-backend.onrender.com/users`)
                             const result = await response.json()
 
                             if (result.status) {

@@ -27,7 +27,7 @@ const SignUp = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/user`, {
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/user`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)

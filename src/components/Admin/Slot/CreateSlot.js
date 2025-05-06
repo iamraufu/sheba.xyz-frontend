@@ -23,7 +23,7 @@ const CreateSlot = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/slot`, {
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/slot`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -34,7 +34,7 @@ const CreateSlot = () => {
                     toast.success(`${result.message}`)
                     const fetchData = async () => {
                         try {
-                            const response = await fetch(`http://localhost:5000/slots`)
+                            const response = await fetch(`https://sheba-xyz-backend.onrender.com/slots`)
                             const result = await response.json()
 
                             if (result.status) {

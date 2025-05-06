@@ -25,7 +25,7 @@ const AddStaffReview = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/review`, {
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/review`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -37,7 +37,7 @@ const AddStaffReview = () => {
                     toast.success(`${result.message}`)
                     const fetchData = async () => {
                         try {
-                            const response = await fetch(`http://localhost:5000/staff-reviews/${staff.name}`)
+                            const response = await fetch(`https://sheba-xyz-backend.onrender.com/staff-reviews/${staff.name}`)
                             const result = await response.json()
                             console.log(result);
                             if (result.status) {

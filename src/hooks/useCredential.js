@@ -22,7 +22,7 @@ const useCredential = () => {
     const userData = () => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/user/${id}`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/user/${id}`)
                 const result = await response.json()
                 setUser(result.user);
             } catch (error) {
@@ -46,7 +46,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/categories`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/categories`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -66,7 +66,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/services`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/services`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -86,7 +86,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/staffs`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/staffs`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -106,7 +106,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/slots`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/slots`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -126,7 +126,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/payments`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/payments`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -146,7 +146,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/payments-email/${user.email}`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/payments-email/${user.email}`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -166,7 +166,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/staff-payments/${user.name}`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/staff-payments/${user.name}`)
                 const result = await response.json()
 
                 if (result.status) {

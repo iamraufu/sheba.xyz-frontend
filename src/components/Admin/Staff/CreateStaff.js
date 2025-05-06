@@ -30,7 +30,7 @@ const CreateStaff = () => {
 
             const fetchData = async () => {
                 try {
-                    const response = await fetch(`http://localhost:5000/staff`, {
+                    const response = await fetch(`https://sheba-xyz-backend.onrender.com/staff`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(formData)
@@ -41,7 +41,7 @@ const CreateStaff = () => {
                         toast.success(`${result.message}`)
                         const fetchData = async () => {
                             try {
-                                const response = await fetch(`http://localhost:5000/staffs`)
+                                const response = await fetch(`https://sheba-xyz-backend.onrender.com/staffs`)
                                 const result = await response.json()
 
                                 if (result.status) {

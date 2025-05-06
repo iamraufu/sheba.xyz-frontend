@@ -15,7 +15,7 @@ const StaffDetails = () => {
             if (!staff.name) {
                   const fetchData = async () => {
                         try {
-                              const response = await fetch(`http://localhost:5000/staff/${id}`)
+                              const response = await fetch(`https://sheba-xyz-backend.onrender.com/staff/${id}`)
                               const result = await response.json()
 
                               if (result.status) {
@@ -35,7 +35,7 @@ const StaffDetails = () => {
       useEffect(() => {
             const fetchData = async () => {
                   try {
-                        const response = await fetch(`http://localhost:5000/staff-reviews/${staff.name}`)
+                        const response = await fetch(`https://sheba-xyz-backend.onrender.com/staff-reviews/${staff.name}`)
                         const result = await response.json()
 
                         if (result.status) {

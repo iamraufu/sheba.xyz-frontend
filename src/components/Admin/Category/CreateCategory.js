@@ -17,7 +17,7 @@ const CreateCategory = () => {
 
             const fetchData = async () => {
                   try {
-                        const response = await fetch(`http://localhost:5000/category`, {
+                        const response = await fetch(`https://sheba-xyz-backend.onrender.com/category`, {
                               method: 'POST',
                               headers: { 'Content-Type': 'application/json' },
                               body: JSON.stringify(data)
@@ -29,7 +29,7 @@ const CreateCategory = () => {
                               toast.success(`${result.message}`)
                               const fetchData = async () => {
                                     try {
-                                          const response = await fetch(`http://localhost:5000/categories`)
+                                          const response = await fetch(`https://sheba-xyz-backend.onrender.com/categories`)
                                           const result = await response.json()
 
                                           if (result.status) {

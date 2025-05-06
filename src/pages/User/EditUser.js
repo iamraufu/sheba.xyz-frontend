@@ -17,7 +17,7 @@ const EditUser = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/user/${id}`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/user/${id}`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -45,7 +45,7 @@ const EditUser = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/user/${id}`, {
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/user/${id}`, {
                     method: 'PATCH',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -55,7 +55,7 @@ const EditUser = () => {
                 if (result.status) {
                     const fetchData = async () => {
                         try {
-                            const response = await fetch(`http://localhost:5000/users`)
+                            const response = await fetch(`https://sheba-xyz-backend.onrender.com/users`)
                             const result = await response.json()
 
                             if (result.status) {

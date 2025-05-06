@@ -12,7 +12,7 @@ const ViewCategories = () => {
 
             const fetchData = async () => {
                   try {
-                        const response = await fetch(`http://localhost:5000/category/${id}`, {
+                        const response = await fetch(`https://sheba-xyz-backend.onrender.com/category/${id}`, {
                               method: 'DELETE'
                         })
                         const result = await response.json()
@@ -21,7 +21,7 @@ const ViewCategories = () => {
                               toast.error(`${result.message}`)
                               const fetchData = async () => {
                                     try {
-                                          const response = await fetch(`http://localhost:5000/categories`)
+                                          const response = await fetch(`https://sheba-xyz-backend.onrender.com/categories`)
                                           const result = await response.json()
 
                                           if (result.status) {

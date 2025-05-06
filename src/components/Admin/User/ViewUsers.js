@@ -11,7 +11,7 @@ const ViewUsers = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/users`)
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/users`)
                 const result = await response.json()
 
                 if (result.status) {
@@ -31,7 +31,7 @@ const ViewUsers = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/user/${id}`, {
+                const response = await fetch(`https://sheba-xyz-backend.onrender.com/user/${id}`, {
                     method: 'DELETE'
                 })
                 const result = await response.json()
@@ -40,7 +40,7 @@ const ViewUsers = () => {
                     toast.error(`${result.message}`)
                     const fetchData = async () => {
                         try {
-                            const response = await fetch(`http://localhost:5000/users`)
+                            const response = await fetch(`https://sheba-xyz-backend.onrender.com/users`)
                             const result = await response.json()
 
                             if (result.status) {

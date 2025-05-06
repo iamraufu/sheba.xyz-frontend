@@ -23,7 +23,7 @@ const EditCategory = () => {
       useEffect(() => {
             const fetchData = async () => {
                   try {
-                        const response = await fetch(`http://localhost:5000/category/${id}`)
+                        const response = await fetch(`https://sheba-xyz-backend.onrender.com/category/${id}`)
                         const result = await response.json()
 
                         if (result.status) {
@@ -47,7 +47,7 @@ const EditCategory = () => {
 
             const fetchData = async () => {
                   try {
-                        const response = await fetch(`http://localhost:5000/category/${id}`, {
+                        const response = await fetch(`https://sheba-xyz-backend.onrender.com/category/${id}`, {
                               method: 'PATCH',
                               headers: { 'Content-Type': 'application/json' },
                               body: JSON.stringify(data)
